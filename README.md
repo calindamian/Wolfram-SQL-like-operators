@@ -11,6 +11,7 @@ with the simplicity of SQL Language .
 A small query example using stocks data imported from FinancialData package:
 sampledataSQL is a 2 dimensional list with 3 columns { symbol, time , close}
 
+```
  whereSQL[sampledataSQL , (! MissingQ[close]) ]  //
  groupBySQL[# , {time} ]&//
  summarySQL [# ,  Association["maxclose" :> (close//Max) ,
@@ -19,6 +20,7 @@ sampledataSQL is a 2 dimensional list with 3 columns { symbol, time , close}
 		]&//
    orderBySQL[#, {maxclose}]&//
    showTableSQL
+```
 
 ## Demo
 https://www.wolframcloud.com/obj/damcalrom/Published/SQL_Operators.nb
